@@ -15,6 +15,11 @@ spring:
   #   hibernate:
   #     ddl-auto: update
   #   show-sql: true
+  spring:
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
 eureka:
   client:
