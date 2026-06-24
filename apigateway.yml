@@ -7,7 +7,7 @@ spring:
       routes:
 
         - id: state-service
-          uri: lb://STATE-SERVICE
+          uri: lb://state-service
           predicates:
             - Path=/api/states/**
 
