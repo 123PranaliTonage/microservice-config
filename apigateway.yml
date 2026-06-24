@@ -4,20 +4,22 @@ server:
 spring:
   cloud:
     gateway:
-      mvc:
-        routes:
+      routes:
 
-          - id: state-service
-            uri: lb://state-service 
-            predicates:
-              - Path=/api/states/**
+        - id: state-service
+          uri: lb://state-service
+          predicates:
+            - Path=/api/states/**
 
-         - id: user-service
-            uri: lb://user-service
-            predicates:
-              - Path=/api/users/**
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/users/**
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+      logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
