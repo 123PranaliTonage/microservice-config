@@ -1,15 +1,6 @@
 server:
   port: 8085
 
-spring:
-  cloud:
-    gateway:
-      routes:
-        - id: user-service
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path=/api/users/**
-
 eureka:
   client:
     service-url:
