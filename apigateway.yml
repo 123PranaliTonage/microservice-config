@@ -4,16 +4,18 @@ server:
 spring:
   cloud:
     gateway:
-      routes:
-        - id: state-service
-          uri: lb://STATE-SERVICE
-          predicates:
-            - Path=/api/states/**
+      mvc:
+        routes:
 
-        - id: user-service
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path=/api/users/**
+          - id: state-service
+            uri: lb://STATE-SERVICE
+            predicates:
+              - Path=/api/states/**
+
+          - id: user-service
+            uri: lb://USER-SERVICE
+            predicates:
+              - Path=/api/users/**
 
 eureka:
   client:
