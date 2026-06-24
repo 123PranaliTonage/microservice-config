@@ -4,7 +4,6 @@ server:
 spring:
   cloud:
     gateway:
-     mvc:
       routes:
 
         - id: state-service
