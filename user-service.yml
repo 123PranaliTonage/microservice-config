@@ -23,3 +23,6 @@ eureka:
 
 thirdparty:
   base-url: http://localhost:8086
+
+aes:
+  secret-key: 1234567890123456
